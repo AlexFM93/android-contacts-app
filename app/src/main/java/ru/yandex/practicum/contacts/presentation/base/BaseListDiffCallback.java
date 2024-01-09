@@ -8,9 +8,8 @@ public class BaseListDiffCallback<T extends ListDiffInterface<T>> extends DiffUt
 
     @Override
     public boolean areItemsTheSame(@NonNull T oldItem, @NonNull T newItem) {
-        return oldItem.theSameAs(newItem) == newItem.theSameAs(oldItem);
-    }
-
+        return oldItem.theSameAs(newItem);
+    } // очень странно, что я написал до этого. Даже не заметил, что нагородил. И удивлен. что всё работало))
     @Override
     public boolean areContentsTheSame(@NonNull T oldItem, @NonNull T newItem) {
         return oldItem.equals(newItem);
